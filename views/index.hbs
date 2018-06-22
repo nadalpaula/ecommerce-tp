@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheets/style.less">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster|Poiret+One" rel="stylesheet"> 
+	<title></title>
+</head>
+<body>
+<div class="nav-container">
+<img src="../images/main1.jpg">
+<p class="nav-text">Make Up</p>
+</div>
+
+<p class="newArrival">New Arrivals</p>
+
+<div class="products-container">
+{{#each products}}
+<div class="products">
+	<img src="{{this.imagen}}" data-id="{{this.id}}">
+	<p align="justify">{{this.titulo}}</p>
+</div>
+{{/each}}
+</div>
+
+<div class="aref">
+<a href="/add" class="addItem">Agregar Item</a>
+</div>
+<script
+ src="https://code.jquery.com/jquery-3.3.1.min.js"
+ crossorigin="anonymous"></script>
+<script type="text/javascript" src="/javascripts/main.js"></script>
+</body>
+</html>

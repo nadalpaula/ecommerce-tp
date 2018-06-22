@@ -1,0 +1,10 @@
+let self = {}
+const productsService = require('../services/productsService.js')
+
+self.add = function(req, res){
+ res.json({
+ 	products: productsService.add(req.body)
+})
+}
+
+module.exports = self;
