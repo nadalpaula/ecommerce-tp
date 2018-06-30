@@ -43,32 +43,34 @@ self.showProducts = function() {
     return products
 }
 
+const user = {
+    usuario: 'paulanadal',
+    password: 'argentina'
+}
+
+self.authenticate = function (data) {
+  if (data.username == user.username && data.password == user.password ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 self.add = function(data){
     const pr = products.length
     const buscarId = products[pr - 1].id
     let user = data.user
     let pass = data.pass
-    const usuario = 'paulanadal'
-    const password = 'argentina'
+    
 
-    if(user === usuario && pass === password){
     products.push({
         
         imagen: data.imagen,
         titulo: data.titulo,
         id: buscarId + 1,
-
-
-        
     })
-    
+   return products 
 }
-
-
-return products
-
-} 
-
 
 
 module.exports = self;

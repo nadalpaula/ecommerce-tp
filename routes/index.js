@@ -6,6 +6,8 @@ const productsController = require('../controllers/productsController')
 const addController = require('../controllers/addController')
 /* GET home page. */
 router.get('/', productsController.home)
+router.get('/', productsController.auth)
+router.post('/', productsController.authenticate)
 
 router.get('/add', function (req, res) {
   res.render('add');
